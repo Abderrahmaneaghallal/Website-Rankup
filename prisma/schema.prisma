@@ -1,0 +1,291 @@
+// RankUp CMS Database Schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── AUTH ────────────────────────────────────────────────────
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  name      String
+  role      String   @default("ADMIN") // ADMIN | EDITOR
+  avatar    String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  blogPosts BlogPost[]
+}
+
+// ─── PAGES & SECTIONS ───────────────────────────────────────
+
+model Page {
+  id              String   @id @default(cuid())
+  slug            String   @unique
+  titleFr         String   @default("")
+  titleEn         String   @default("")
+  titleAr         String   @default("")
+  metaDescFr      String   @default("")
+  metaDescEn      String   @default("")
+  metaDescAr      String   @default("")
+  isPublished     Boolean  @default(false)
+  isSystem        Boolean  @default(false) // System pages can't be deleted
+  sortOrder       Int      @default(0)
+  template        String   @default("default") // default | landing | blog
+  featuredImage   String?
+  // SEO fields
+  ogTitleFr       String   @default("")
+  ogTitleEn       String   @default("")
+  ogTitleAr       String   @default("")
+  ogImage         String?
+  canonicalUrl    String   @default("")
+  robots          String   @default("index, follow") // index,follow | noindex,nofollow etc.
+  schemaType      String   @default("") // Article | FAQPage | WebPage | LocalBusiness etc.
+  schemaData      String   @default("{}") // JSON-LD structured data
+  customHeadCode  String   @default("") // Custom code injected in <head>
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  sections Section[]
+}
+
+model Section {
+  id          String   @id @default(cuid())
+  pageId      String
+  type        String   // hero | text | image | cta | faq | stats | testimonials | services | pricing | custom
+  titleFr     String   @default("")
+  titleEn     String   @default("")
+  titleAr     String   @default("")
+  contentFr   String   @default("") // JSON string for complex content
+  contentEn   String   @default("")
+  contentAr   String   @default("")
+  settings    String   @default("{}") // JSON: background, layout, spacing, etc.
+  sortOrder   Int      @default(0)
+  isEnabled   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  page Page @relation(fields: [pageId], references: [id], onDelete: Cascade)
+}
+
+// ─── BLOG ───────────────────────────────────────────────────
+
+model BlogCategory {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  nameFr      String
+  nameEn      String   @default("")
+  nameAr      String   @default("")
+  descFr      String   @default("")
+  descEn      String   @default("")
+  descAr      String   @default("")
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  posts BlogPost[]
+}
+
+model BlogPost {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  titleFr       String
+  titleEn       String   @default("")
+  titleAr       String   @default("")
+  excerptFr     String   @default("")
+  excerptEn     String   @default("")
+  excerptAr     String   @default("")
+  contentFr     String   @default("") // HTML/Rich text
+  contentEn     String   @default("")
+  contentAr     String   @default("")
+  featuredImage String?
+  imageAlt      String   @default("")
+  metaTitleFr   String   @default("")
+  metaTitleEn   String   @default("")
+  metaTitleAr   String   @default("")
+  metaDescFr    String   @default("")
+  metaDescEn    String   @default("")
+  metaDescAr    String   @default("")
+  tags          String   @default("") // comma-separated
+  status        String   @default("DRAFT") // DRAFT | PUBLISHED | ARCHIVED
+  readTime      Int      @default(5) // minutes
+  isFeatured    Boolean  @default(false)
+  publishedAt   DateTime?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  categoryId String?
+  category   BlogCategory? @relation(fields: [categoryId], references: [id])
+
+  authorId String
+  author   User @relation(fields: [authorId], references: [id])
+}
+
+// ─── MEDIA ──────────────────────────────────────────────────
+
+model Media {
+  id        String   @id @default(cuid())
+  filename  String
+  url       String
+  altText   String   @default("")
+  mimeType  String
+  size      Int      // bytes
+  width     Int?
+  height    Int?
+  createdAt DateTime @default(now())
+}
+
+// ─── SITE SETTINGS ──────────────────────────────────────────
+
+model SiteSetting {
+  id    String @id @default(cuid())
+  key   String @unique
+  value String @default("")
+}
+
+// ─── CONTACT SUBMISSIONS ─────────────────────────────────────
+
+model ContactSubmission {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String   @default("")
+  service   String   @default("")
+  message   String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+// ─── PORTFOLIO ───────────────────────────────────────────────
+
+model Portfolio {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  titleFr       String
+  titleEn       String   @default("")
+  titleAr       String   @default("")
+  excerptFr     String   @default("")
+  excerptEn     String   @default("")
+  excerptAr     String   @default("")
+  clientName    String   @default("")
+  industry      String   @default("")
+  tags          String   @default("")    // comma-separated
+  results       String   @default("[]") // JSON array of result strings
+  galleryImages String   @default("[]") // JSON array of image URLs (result screenshots)
+  featuredImage String?
+  imageAlt      String   @default("")
+  metaTitleFr   String   @default("")
+  metaTitleEn   String   @default("")
+  metaTitleAr   String   @default("")
+  metaDescFr    String   @default("")
+  metaDescEn    String   @default("")
+  metaDescAr    String   @default("")
+  isFeatured    Boolean  @default(false)
+  isPublished   Boolean  @default(true)
+  sortOrder     Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  websites      PortfolioWebsite[]
+  socialDesigns PortfolioSocialDesign[]
+  videos        PortfolioVideo[]
+}
+
+// ─── PORTFOLIO WEBSITES ─────────────────────────────────────
+
+model PortfolioWebsite {
+  id              String   @id @default(cuid())
+  portfolioId     String
+  title           String
+  category        String   @default("")
+  url             String   @default("")
+  screenshotUrl   String?
+  gradient        String   @default("from-violet-900/80 via-purple-800/60 to-indigo-900/80")
+  accentColor     String   @default("#8b5cf6")
+  descriptionFr   String   @default("")
+  descriptionEn   String   @default("")
+  descriptionAr   String   @default("")
+  statTraffic     String   @default("")
+  statConversion  String   @default("")
+  statSpeed       String   @default("")
+  mockupSections  String   @default("[]")
+  isFeatured      Boolean  @default(false)
+  isPublished     Boolean  @default(true)
+  sortOrder       Int      @default(0)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  portfolio Portfolio @relation(fields: [portfolioId], references: [id], onDelete: Cascade)
+}
+
+// ─── PORTFOLIO SOCIAL MEDIA DESIGNS ─────────────────────────
+
+model PortfolioSocialDesign {
+  id            String   @id @default(cuid())
+  portfolioId   String
+  title         String
+  type          String   @default("instagram")
+  imageUrl      String?
+  color         String   @default("from-pink-500 to-purple-600")
+  ratio         String   @default("aspect-square")
+  clientName    String   @default("")
+  isFeatured    Boolean  @default(false)
+  isPublished   Boolean  @default(true)
+  sortOrder     Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  portfolio Portfolio @relation(fields: [portfolioId], references: [id], onDelete: Cascade)
+}
+
+// ─── PORTFOLIO VIDEOS ───────────────────────────────────────
+
+model PortfolioVideo {
+  id            String   @id @default(cuid())
+  portfolioId   String
+  title         String
+  titleFr       String   @default("")
+  titleEn       String   @default("")
+  titleAr       String   @default("")
+  platform      String   @default("youtube")
+  videoUrl      String   @default("")
+  thumbnailUrl  String?
+  descriptionFr String   @default("")
+  descriptionEn String   @default("")
+  descriptionAr String   @default("")
+  clientName    String   @default("")
+  category      String   @default("")
+  isFeatured    Boolean  @default(false)
+  isPublished   Boolean  @default(true)
+  sortOrder     Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  portfolio Portfolio @relation(fields: [portfolioId], references: [id], onDelete: Cascade)
+}
+
+// ─── SECTION IMAGES ─────────────────────────────────────────
+
+model SectionImage {
+  id          String   @id @default(cuid())
+  sectionKey  String   @unique // e.g. "home.hero", "about.mission", "services.seo.features"
+  imageUrl    String              // URL path to the image (e.g. /uploads/hero-bg.jpg)
+  altText     String   @default("")
+  titleFr     String   @default("")
+  titleEn     String   @default("")
+  titleAr     String   @default("")
+  descFr      String   @default("")
+  descEn      String   @default("")
+  descAr      String   @default("")
+  isEnabled   Boolean  @default(true)
+  sortOrder   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

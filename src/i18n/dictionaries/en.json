@@ -1,0 +1,444 @@
+{
+    "nav": {
+        "home": "Home",
+        "about": "About",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "blog": "Blog",
+        "contact": "Contact",
+        "contactUs": "Contact Us",
+        "servicesList": {
+            "socialMedia": "Social Media",
+            "onlineAds": "Online Advertising",
+            "graphicDesign": "Graphic Design",
+            "webCreation": "Web Development",
+            "seo": "SEO",
+            "photography": "Photography",
+            "events": "Events"
+        }
+    },
+    "hero": {
+        "badge": "#1 Digital Marketing Agency in Morocco",
+        "title": "Digital Marketing Agency in Morocco —",
+        "highlight": "Growth & Results in Agadir",
+        "subtitle": "RankUp is the #1 digital marketing agency in Morocco, specializing in SEO, online advertising, branding and lead generation. We support businesses in Agadir, Casablanca, Marrakech and Rabat in their online growth with measurable results.",
+        "cta1": "Contact Us",
+        "cta2": "Our Services",
+        "stats": {
+            "clients": "Satisfied Clients",
+            "revenue": "MAD Generated",
+            "cities": "Cities in Morocco"
+        }
+    },
+    "trustBanner": {
+        "items": [
+            "Certified Google Partner",
+            "Certified Meta Business",
+            "+350 Satisfied Clients",
+            "+240M MAD Generated",
+            "4 Years of Excellence"
+        ]
+    },
+    "scrollTickers": {
+        "ticker1": "DIGITAL MARKETING • BUSINESS GROWTH • SEO • BRANDING •",
+        "ticker2": "STRATEGY • PERFORMANCE • INNOVATION • RESULTS •",
+        "ticker3": "YOUR SUCCESS • OUR MISSION • RANKUP •"
+    },
+    "whyRankup": {
+        "badge": "Why RankUp",
+        "title": "Your partner for <span class=\"gradient-text\">digital growth</span>",
+        "description": "At RankUp, we don't sell simple marketing services. We build sustainable and measurable client generation systems for businesses in Casablanca, Marrakech, Rabat, Agadir and throughout Morocco.",
+        "cards": [
+            {
+                "icon": "📊",
+                "title": "Data-Driven Approach",
+                "desc": "Every decision is based on concrete data and in-depth analysis of the Moroccan market."
+            },
+            {
+                "icon": "🎯",
+                "title": "Measurable Results",
+                "desc": "Clear KPIs, transparent reports and rigorous follow-up of every action taken."
+            },
+            {
+                "icon": "🤝",
+                "title": "Dedicated Support",
+                "desc": "A single point of contact and a dedicated team that understands your challenges and goals."
+            },
+            {
+                "icon": "⚡",
+                "title": "Certified Expertise",
+                "desc": "Google and Meta certified team with complete mastery of digital tools and platforms."
+            }
+        ]
+    },
+    "services": {
+        "badge": "Our Services",
+        "title": "<span class=\"gradient-text\">Digital Marketing</span> Solutions in Morocco",
+        "subtitle": "From SEO to online advertising, branding and web development, we cover all your digital needs in Casablanca, Marrakech, Agadir, Rabat and beyond.",
+        "items": [
+            {
+                "icon": "📱",
+                "title": "Social Media Management",
+                "description": "Grow your community and engage your audience on Instagram, Facebook, TikTok and LinkedIn with data-driven strategies in Casablanca, Marrakech and across Morocco.",
+                "href": "/services/reseaux-sociaux"
+            },
+            {
+                "icon": "📢",
+                "title": "Online Advertising",
+                "description": "High-performing Google Ads and Meta Ads campaigns to generate qualified leads in Rabat, Casablanca, Agadir and maximize your return on investment.",
+                "href": "/services/publicite-en-ligne"
+            },
+            {
+                "icon": "🎨",
+                "title": "Graphic Design",
+                "description": "Premium visual identity and professional communication materials for brands in Marrakech, Casablanca, Rabat and Agadir.",
+                "href": "/services/design-graphique"
+            },
+            {
+                "icon": "🌐",
+                "title": "Web Development",
+                "description": "Modern, fast and SEO-optimized websites that convert your visitors into loyal customers — from Casablanca to Agadir.",
+                "href": "/services/creation-sites-web"
+            },
+            {
+                "icon": "🚀",
+                "title": "SEO (Search Engine Optimization)",
+                "description": "Rank your website on Google's first page in Casablanca, Marrakech, Rabat and Agadir with a continuous stream of qualified traffic.",
+                "href": "/services/referencement-naturel"
+            },
+            {
+                "icon": "📸",
+                "title": "Photography",
+                "description": "Professional corporate, product and event photography to elevate your business image in Agadir, Marrakech and Morocco.",
+                "href": "/services/photographie"
+            },
+            {
+                "icon": "🎪",
+                "title": "Event Management",
+                "description": "Integrated digital communication strategy for your events in Casablanca, Marrakech, Rabat and Agadir.",
+                "href": "/services/gestion-evenements"
+            }
+        ]
+    },
+    "methodology": {
+        "badge": "Our Methodology",
+        "title": "A <span class=\"gradient-text\">results-oriented</span> approach",
+        "subtitle": "Our methodology is built on 4 fundamental pillars that guarantee the effectiveness of every digital strategy. Whether you're based in Casablanca, Marrakech, Rabat or Agadir, our approach adapts to your local market.",
+        "steps": [
+            {
+                "number": "01",
+                "title": "Market & Target Analysis",
+                "description": "We start with a deep understanding of your business, market, target audience and competitors to define the most effective strategy."
+            },
+            {
+                "number": "02",
+                "title": "Creating Converting Offers",
+                "description": "We develop clear value propositions and optimized conversion paths to transform your visitors into qualified clients."
+            },
+            {
+                "number": "03",
+                "title": "Continuous Optimization",
+                "description": "Every campaign and channel is constantly analyzed and optimized through our data-driven approach and systematic A/B testing."
+            },
+            {
+                "number": "04",
+                "title": "Optimized Landing Pages",
+                "description": "We design high-performance landing pages, optimized for conversion and SEO, tailored to each segment of your audience."
+            }
+        ]
+    },
+    "testimonials": {
+        "badge": "Testimonials",
+        "title": "What our <span class=\"gradient-text\">clients say</span>",
+        "subtitle": "Discover feedback from businesses in Casablanca, Marrakech, Agadir and Rabat that we've supported in their digital transformation."
+    },
+    "pricing": {
+        "badge": "Our Pricing",
+        "title": "Plans tailored to <span class=\"gradient-text\">every ambition</span>",
+        "subtitle": "Flexible plans designed to meet the needs of startups and growing businesses in Casablanca, Marrakech, Rabat, Agadir and across Morocco."
+    },
+    "faq": {
+        "badge": "FAQ",
+        "title": "Frequently <span class=\"gradient-text\">Asked Questions</span>",
+        "subtitle": "Find answers to the most asked questions about our digital marketing services in Casablanca, Marrakech, Rabat, Agadir and across Morocco."
+    },
+    "cta": {
+        "title": "Ready to transform",
+        "highlight": "your digital presence?",
+        "subtitle": "Contact us today for a free consultation and discover how we can accelerate your growth.",
+        "btn1": "Start your project",
+        "btn2": "Call now"
+    },
+    "footer": {
+        "description": "The #1 digital marketing agency in Morocco. Experts in SEO, online advertising, branding and lead generation.",
+        "services": "SERVICES",
+        "company": "COMPANY",
+        "cities": "CITIES",
+        "social": "SOCIAL",
+        "rights": "All rights reserved.",
+        "legal": {
+            "privacy": "Privacy Policy",
+            "terms": "Terms of Use"
+        }
+    },
+    "prefooter": {
+        "title": "Start your",
+        "highlight": "digital growth",
+        "subtitle": "Join 350+ Moroccan businesses that trust us.",
+        "cta": "Get a free audit",
+        "features": [
+            "Free audit",
+            "No commitment",
+            "Response within 24h"
+        ]
+    },
+    "resultsGuarantee": {
+        "badge": "Proven Results",
+        "title": "The agency that <span class=\"gradient-text\">guarantees concrete results</span>",
+        "cards": [
+            {
+                "icon": "💰",
+                "title": "Revenue Growth",
+                "desc": "Significant increase in your revenue through conversion-oriented and ROI-driven marketing strategies."
+            },
+            {
+                "icon": "📈",
+                "title": "Digital Strategy",
+                "desc": "A comprehensive, cohesive strategy combining SEO, digital advertising, social media and branding for maximum impact."
+            },
+            {
+                "icon": "⭐",
+                "title": "E-Reputation",
+                "desc": "Proactive management of your online brand image, customer reviews and presence on strategic platforms."
+            },
+            {
+                "icon": "🏆",
+                "title": "Premium Branding",
+                "desc": "Creating a strong and memorable visual identity that positions your brand above the competition."
+            }
+        ],
+        "badges": [
+            "No commitment",
+            "24h response",
+            "ROI-focused results"
+        ],
+        "stats": [
+            {
+                "value": "+240M",
+                "label": "MAD Generated"
+            },
+            {
+                "value": "98%",
+                "label": "Client Satisfaction"
+            },
+            {
+                "value": "+350%",
+                "label": "Average ROI"
+            },
+            {
+                "value": "4 years",
+                "label": "Of Excellence"
+            }
+        ]
+    },
+    "processSteps": {
+        "badge": "Our Process",
+        "title": "3 Steps to <span class=\"gradient-text\">Boost Your Image</span>",
+        "steps": [
+            {
+                "number": "01",
+                "title": "Audit & Strategy",
+                "desc": "Complete analysis of your digital presence, opportunity identification and tailored strategy development.",
+                "items": [
+                    "Complete SEO audit",
+                    "Competitive analysis",
+                    "Market research",
+                    "Detailed action plan"
+                ]
+            },
+            {
+                "number": "02",
+                "title": "Execution & Launch",
+                "desc": "Implementation of the strategy with concrete and measurable actions across all digital channels.",
+                "items": [
+                    "Content creation",
+                    "Ad campaigns",
+                    "SEO optimization",
+                    "Social media management"
+                ]
+            },
+            {
+                "number": "03",
+                "title": "Measure & Optimize",
+                "desc": "Rigorous performance tracking and continuous optimization to maximize your return on investment.",
+                "items": [
+                    "Monthly reports",
+                    "A/B testing",
+                    "Continuous optimization",
+                    "Strategic adjustments"
+                ]
+            }
+        ],
+        "cta": "Book my free strategic audit"
+    },
+    "excellence": {
+        "badge": "Our Promise",
+        "title": "Excellence <span class=\"gradient-text\">in Morocco</span>",
+        "pillars": [
+            {
+                "icon": "🎨",
+                "title": "Premium Design",
+                "desc": "Visual creations that captivate and convert."
+            },
+            {
+                "icon": "📊",
+                "title": "Data Strategy",
+                "desc": "Decisions based on data, not intuition."
+            },
+            {
+                "icon": "🇲🇦",
+                "title": "Local Expertise",
+                "desc": "Deep knowledge of the Moroccan market."
+            },
+            {
+                "icon": "⚡",
+                "title": "Technology",
+                "desc": "The most advanced tools in the digital market."
+            }
+        ]
+    },
+    "cityPresence": {
+        "badge": "National Presence",
+        "title": "Your digital agency <span class=\"gradient-text\">across Morocco</span>",
+        "subtitle": "RankUp supports businesses in Morocco's major cities with strategies tailored to each local market."
+    },
+    "notFound": {
+        "title": "Page not found",
+        "description": "The page you're looking for doesn't exist or has been moved.",
+        "backHome": "Back to home"
+    },
+    "about": {
+        "badge": "About RankUp",
+        "title": "Your Partner for",
+        "highlight": "Digital Growth",
+        "subtitle": "Since 2021, RankUp has been helping Moroccan businesses dominate the digital landscape. Based in Agadir with offices in Casablanca, Marrakech and Rabat.",
+        "story": {
+            "badge": "Our Story",
+            "title": "From a dream to a <span class=\"gradient-text\">reference</span>",
+            "text": "Founded in 2021 in Agadir, RankUp was born from the conviction that Moroccan businesses deserve world-class digital marketing expertise. Today, we're proud to support over 350 businesses across Morocco."
+        },
+        "values": {
+            "badge": "Our Values",
+            "title": "What <span class=\"gradient-text\">drives us</span>"
+        }
+    },
+    "contact": {
+        "badge": "Contact Us",
+        "title": "Launch your",
+        "highlight": "digital project today",
+        "subtitle": "Ready to transform your online presence? Contact our team of experts for a free consultation.",
+        "form": {
+            "name": "Full name",
+            "email": "Email",
+            "phone": "Phone",
+            "company": "Company",
+            "service": "Desired service",
+            "message": "Your message",
+            "submit": "Send message",
+            "sending": "Sending...",
+            "selectService": "Select a service",
+            "services": [
+                "SEO & Search Engine Optimization",
+                "Online Advertising",
+                "Social Media Management",
+                "Graphic Design",
+                "Web Development",
+                "Photography",
+                "Events",
+                "Other"
+            ]
+        },
+        "info": {
+            "email": "Email",
+            "phone": "Phone",
+            "whatsapp": "WhatsApp"
+        },
+        "offices": {
+            "title": "Our Offices",
+            "hq": "Headquarters",
+            "regional": "Regional Office"
+        },
+        "trustPoints": [
+            "Guaranteed response within 24 hours",
+            "Free digital audit with no commitment",
+            "Custom quote within 48 hours",
+            "Free 30-minute discovery call",
+            "Complete confidentiality guaranteed",
+            "Service available throughout Morocco"
+        ]
+    },
+    "blog": {
+        "badge": "Blog & News",
+        "title": "Resources",
+        "highlight": "Digital Marketing",
+        "subtitle": "Discover our articles, guides and analyses on digital marketing in Morocco.",
+        "readMore": "Read article",
+        "readTime": "min read",
+        "categories": [
+            "All",
+            "Strategy",
+            "SEO",
+            "Content Marketing",
+            "Branding",
+            "Web",
+            "Social Media",
+            "Technology"
+        ],
+        "popularTopics": "Popular Topics",
+        "articles": "articles",
+        "newsletter": {
+            "title": "Stay ahead",
+            "subtitle": "Receive our latest analyses and marketing strategies directly in your inbox.",
+            "placeholder": "Your email",
+            "cta": "Subscribe"
+        }
+    },
+    "portfolio": {
+        "badge": "Our Work",
+        "title": "Portfolio",
+        "highlight": "& Projects",
+        "subtitle": "Discover a selection of projects completed for our clients across Morocco.",
+        "viewProject": "View project",
+        "industries": {
+            "badge": "Sectors",
+            "title": "Industries <span class=\"gradient-text\">we serve</span>",
+            "clients": "clients"
+        }
+    },
+    "servicesPage": {
+        "badge": "All our services",
+        "title": "Complete Solutions for",
+        "highlight": "Digital Marketing",
+        "subtitle": "Comprehensive expertise to cover all your digital marketing needs in Morocco."
+    },
+    "common": {
+        "learnMore": "Learn more",
+        "getStarted": "Get started",
+        "viewAll": "View all",
+        "backHome": "Back to home",
+        "loading": "Loading...",
+        "readMore": "Read more"
+    },
+    "metadata": {
+        "title": "RankUp | Digital Marketing Agency in Morocco",
+        "description": "RankUp is the #1 digital marketing agency in Morocco. Experts in SEO, online advertising, branding and lead generation in Casablanca, Agadir, Rabat and Marrakech.",
+        "keywords": [
+            "digital marketing agency morocco",
+            "digital communication agency",
+            "SEO morocco",
+            "online advertising morocco",
+            "branding morocco",
+            "web development morocco"
+        ]
+    }
+}

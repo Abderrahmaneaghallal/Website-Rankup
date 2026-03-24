@@ -1,0 +1,18 @@
+# ═══════════════════════════════════════════════════
+# RankUp+ Website — Netlify Configuration
+# ═══════════════════════════════════════════════════
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+  ignore = "exit 1"
+
+# Next.js requires the Netlify Next.js plugin
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+# Disable the China CDN plugin that was installed by mistake
+[[plugins]]
+  package = "@21yunbox/netlify-plugin-21yunbox-deploy-to-china-cdn"
+  [plugins.inputs]
+    enabled = false
