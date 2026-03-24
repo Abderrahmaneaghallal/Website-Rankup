@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   devIndicators: false,
-  allowedDevOrigins: ["*.ngrok-free.dev"],
   reactStrictMode: true,
   poweredByHeader: false,
   compress: true,
@@ -46,4 +45,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
